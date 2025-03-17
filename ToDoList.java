@@ -8,6 +8,7 @@ public class ToDoList {
         while (true) {
             System.out.println("\nTasks: " + tasks);
             System.out.println("1. Add Task | 2: Remove Task | 3: Exit");
+        try {
             int choice = sc.nextInt();
             sc.nextLine();
 
@@ -29,6 +30,9 @@ public class ToDoList {
                    System.out.println("Invalid choice. Please try again.");
            }
         // If user enters a value that isn't an integer it will say invalid input and ask for input again
+        } catch (InputMismatchException e) {
+              System.out.println("Invalid input. Please try again.");
+              sc.nextLine();
         }  
    }
 }
